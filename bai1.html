@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let arr = [[11, 3, 5, 6, 7, 8], [3, 7, 5, 1, 2, 4]];
+    let arr = [[11, 3, 5, 6, 7, 8], [9, 13, 12, 1, 2, 4]];
     let a = 0;
     let s = 1;
     // câu a
@@ -59,24 +59,32 @@
     }
     document.write("Số nhỏ nhất là chẵn : "+min + '<br>');
     //Câu f
-    let b = "Max của hàng là : ";
+    let b = "Max của hàng  ";
+    let count =0;
     for (let i = 0; i < arr.length; i++) {
         let maxhang = arr[i][0];
         for (let j = 0; j < arr[i].length; j++) {
             if (maxhang < arr[i][j]) {
                 maxhang = arr [i][j] ;
+                count++
             }
-        } document.write( b+  maxhang + "<br>" )
+        } document.write( b+count +" là : " + maxhang + "<br>" )
     }
     //Câu g
-    let c = "Min của cột là : ";
-    for (let i = 0; i < arr.length; i++) {
-        let mincot= arr[i][i];
+    let c = "Min của cột ";
+    let count1 = 0;
+    for (let i = 1; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++) {
+            let mincot= arr[0][j];
             if (mincot > arr[i][j]) {
                 mincot = arr [i][j] ;
+                document.write( c+count1 + " là : " + mincot + "<br>" );
+                count1++;
             }
-        } document.write( c+  mincot + "<br>" )
+            else {
+                document.write(c+count1 + " là : " +mincot + "<br>")
+            }
+        }
     }
 </script>
 </body>
