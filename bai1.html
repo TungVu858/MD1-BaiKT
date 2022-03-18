@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [[1, 0, 5, 6, 7, 8], [3, 7, 5, 1, 2, 4]];
+    let a = 0;
+    let s = 1;
+    // câu a
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 == 0) {
+                document.write(arr[i][j] + "<br>")
+            }
+        }
+    }
+
+    //câu b
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 == 0) {
+                a++;
+            }
+        }
+    }
+    document.write("Số các phần tử chẵn là :  " + a + '<br>');
+
+    // câu c
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 1; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 == 1) {
+                s *= arr[i][j];
+            }
+        }
+    }
+    document.write("Tích các phần tử lẻ : " + s + '<br>');
+
+    // Câu d
+    let max = arr[0][0];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 1; j < arr[i].length; j++) {
+            if (max < arr[i][j]) {
+                max = arr [i][j];
+            }
+        }
+    }
+    document.write("Phần tử lớn nhất là : " + max + '<br>');
+
+    //câu e
+    let min = arr[0][1];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 1; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 == 0 && min > arr[i][j])
+                min = arr [i][j];
+        }
+    }
+    document.write(min);
+    //Câu f
+
+    let
+
+</script>
+</body>
+</html>
